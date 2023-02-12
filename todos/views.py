@@ -1,4 +1,6 @@
 from django.shortcuts import render
+# from django.views.decorators.csrf import csrf_exempt
+# usei apenas para testar sem a segurança do csrf token
 from django.views.decorators.http import require_http_methods
 
 from .todo import todos
@@ -8,6 +10,7 @@ def index(request):
     return render(request, 'index.html', {'todos': []})
 
 
+# @csrf_exempt
 @require_http_methods(['POST'])
 def search(request):
     res_todos = []
