@@ -131,4 +131,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # COMPRESS CONFIGURATIONS
 COMPRESS_ROOT = BASE_DIR / 'static'
 COMPRESS_ENABLED = True
-STATICFILES_FINDERS = ('compress.finders.CompressFinder')
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)

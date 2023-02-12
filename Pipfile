@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-compressor = "*"
 pytailwindcss = "*"
+django-compressor = "*"
 
 [dev-packages]
 
