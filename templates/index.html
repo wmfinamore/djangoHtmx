@@ -5,6 +5,7 @@
         <input
             type="text"
             name="search"
+            hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
             hx-post="/search/"
             hx-trigger="keyup changed delay:250ms"
             hx-indicator=".htmx-indicator"
