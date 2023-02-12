@@ -1,7 +1,7 @@
 {% load compress %}
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -23,11 +23,5 @@
         <script type="text/javascript" src="{% static 'src/htmx.js' %}"></script>
     {% endcompress %}
 
-    <script>
-        document.body.adEventListener('htmx.configRequest', (event) => {
-            event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}'
-        }
-        )
-    </script>
 </body>
 </html>
